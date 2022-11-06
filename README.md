@@ -11,7 +11,7 @@ project 2
 1. Added Project.md file with assignment requirements
 1. Updated README file with my changes  
 
-## TODOS
+### TODOS
 
 1. Need views folder with handlebars files and public folder with CSS and JS to test in browser
 1. Need to test routes, db, signup, login, and profile
