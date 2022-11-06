@@ -2,8 +2,9 @@
 project 2
 
 1. Deleted env.EXAMPLE
-1. Refactored mini-project - renamed project model file (project table) to intervew table and replace funding_needed field with tokens_earned
-1. Updated any project code references to interview
-1. Updated models, public, seeds, utils, views files with new table
-1. Updated handlebars files with new title and interview page
-1. Project currently runs in CLI but throws a 500 internal server error in browser while mini-project runs fine. I'm thinking Session is the problem but no idea how to fix it.  
+1. Created homeRoutes.js in controllers folder (using mini-project as example)
+1. Created index.js, interviewRoutes.js, and userRoutes.js in controllers/api folder
+1. Created index.js, Interview.js, and Users.js in models folder to structure db
+1. Crated schema.sql file in db folder (interview_db)
+1. Added Project.md file with assignment requirements
+1. Updated README file with my changes    
