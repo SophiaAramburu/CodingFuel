@@ -1,5 +1,6 @@
 # CodingFuel
-project 2
+
+### ROUTES (APIs, DB, AUTH)
 
 1. Deleted env.EXAMPLE
 1. Created homeRoutes.js in controllers folder (using mini-project as example)
