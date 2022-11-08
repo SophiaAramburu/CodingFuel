@@ -2,6 +2,7 @@
 
 ### SUMMARY
 
+1. Updated profile.js file to create interview
 1. Fixed index.js file in controllers folder
 1. Created seeds folder and data files to test (npm run seed)
 1. Updated README file with my changes  
