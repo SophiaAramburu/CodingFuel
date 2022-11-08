@@ -1,0 +1,17 @@
+[
+  {
+    "name": "JavaScript",
+    "description": "Javascript Interview",
+    "tokens_earned": 5000
+  },
+  {
+    "name": "Front-End",
+    "description": "Front-End Interview",
+    "tokens_earned": 10000
+  },
+  {
+    "name": "Back-End",
+    "description": "Back-End Interview",
+    "tokens_earned": 800
+  }
+]
