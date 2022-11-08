@@ -1,0 +1,75 @@
+{{! Row for the name class }}
+<div class=''>
+  {{! column for the name class }}
+  <div class=''>
+    <h2>Welcome, {{name}}!</h2>
+  </div>
+</div>
+
+{{! Class for the flex column }}
+<div class=''>
+  {{! Column for the interview topics class }}
+  <div class=''>
+    <h3>Interview topics:</h3>
+
+    <form class='form new-project-form'>
+      <div class='form-group'>
+        <label for='interview-name'>Company interviewed with:</label>
+        <input
+          class='form-input'
+          type='text'
+          id='interview-name'
+          name='interview-name'
+        />
+      </div>
+      <div class='form-group'>
+        <label for='interview-funding'>Question asked:</label>
+        <input
+          class='form-input'
+          type='number'
+          id='interview-funding'
+          name='interview-funding'
+        />
+      </div>
+      <div class='form-group'>
+        <label for='interview-desc'>What kind of feedback are you looking for?</label>
+        <textarea
+          class='form-input'
+          id='interview-desc'
+          name='interview-desc'
+        ></textarea>
+      </div>
+      <div class='form-group'>
+        <button type='submit' class='btn btn-primary'>Create</button>
+      </div>
+    </form>
+  </div>
+
+  {{#if interviews.length}}
+    {{! column for the recent interview list }}
+    <div class='project-list'>
+      <h3>Recent interviews:</h3>
+
+      {{#each interviews as |interview|}}
+        {{! Row for the interview objects }}
+        <div class=''>
+          {{! Column for interview information }}
+          <div class=''>
+            <h4><a
+                href='/interview/{{interview.id}}'
+              >{{interview.name}}</a></h4>
+          </div>
+          {{! Column for the delete button }}
+          <div class=''>
+            <button
+              class='btn btn-sm btn-danger'
+              data-id='{{interview.id}}'
+            >DELETE</button>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  {{/if}}
+</div>
+
+<script src='./js/profile.js'></script>

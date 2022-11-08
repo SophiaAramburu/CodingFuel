@@ -1,0 +1,46 @@
+{{#each questions as |question|}}
+  {{! Class for the flex section }}
+  <div class='question'>
+    {{! Class for the question column }}
+    <div class=''>
+      <h2>
+        <a href='/question/{{question.id}}'>{{question.name}}</a>
+      </h2>
+      <p>
+        <span class='question-topic'>
+          /question
+        </span>
+      </p>
+      <p>Asked by
+        {{question.user.name}}
+      </p>
+    </div>
+  </div>
+{{/each}}
+
+<!-- Loop over each object in the threads array -->
+{{#each interviews as |interview|}}
+  {{! Class for the flex section }}
+  <div class='question'>
+    {{! class for the interview column }}
+    <div class=''>
+      <h2>
+        <a href='/interview/{{interview.id}}'>{{interview.name}}</a>
+      </h2>
+      <p>
+        <span class='interview-topic'>{{interview.topic}}</span>
+        /topic
+      </p>
+      <p>Shared by
+        {{interview.user.name}}
+        on
+        {{format_date interview.date_created}}</p>
+    </div>
+    {{! class for text from the interview }}
+    <div class=''>
+      <p>
+        {{interview.description}}
+      </p>
+    </div>
+  </div>
+{{/each}}
