@@ -1,5 +1,5 @@
 {
-  "name": "coding-fuel",
+  "name": "crowd-funding",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -23,7 +23,6 @@
   },
   "devDependencies": {
     "eslint": "^7.12.1",
-		"eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^6.15.0",
     "prettier": "^2.1.2"
   }
