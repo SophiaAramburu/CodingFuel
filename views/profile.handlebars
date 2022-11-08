@@ -1,11 +1,15 @@
-<div class='row'>
-  <div class='col-auto'>
+{{! Row for the name class }}
+<div class=''>
+  {{! column for the name class }}
+  <div class=''>
     <h2>Welcome, {{name}}!</h2>
   </div>
 </div>
 
-<div class='row mt-4'>
-  <div class='col-md-6'>
+{{! Class for the flex column }}
+<div class=''>
+  {{! Column for the interview topics class }}
+  <div class=''>
     <h3>Interview topics:</h3>
 
     <form class='form new-project-form'>
@@ -42,17 +46,21 @@
   </div>
 
   {{#if interviews.length}}
-    <div class='col-md-6 project-list'>
+    {{! column for the recent interview list }}
+    <div class='project-list'>
       <h3>Recent interviews:</h3>
 
       {{#each interviews as |interview|}}
-        <div class='row mb-2'>
-          <div class='col-md-8'>
+        {{! Row for the interview objects }}
+        <div class=''>
+          {{! Column for interview information }}
+          <div class=''>
             <h4><a
                 href='/interview/{{interview.id}}'
               >{{interview.name}}</a></h4>
           </div>
-          <div class='col-md-4'>
+          {{! Column for the delete button }}
+          <div class=''>
             <button
               class='btn btn-sm btn-danger'
               data-id='{{interview.id}}'

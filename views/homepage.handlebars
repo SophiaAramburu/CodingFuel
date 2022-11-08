@@ -1,6 +1,8 @@
 {{#each questions as |question|}}
-  <div class='row mb-4 question'>
-    <div class='col-md-5'>
+  {{! Class for the flex section }}
+  <div class='question'>
+    {{! Class for the question column }}
+    <div class=''>
       <h2>
         <a href='/question/{{question.id}}'>{{question.name}}</a>
       </h2>
@@ -18,8 +20,10 @@
 
 <!-- Loop over each object in the threads array -->
 {{#each interviews as |interview|}}
-  <div class='row mb-4 question'>
-    <div class='col-md-5'>
+  {{! Class for the flex section }}
+  <div class='question'>
+    {{! class for the interview column }}
+    <div class=''>
       <h2>
         <a href='/interview/{{interview.id}}'>{{interview.name}}</a>
       </h2>
@@ -32,7 +36,8 @@
         on
         {{format_date interview.date_created}}</p>
     </div>
-    <div class='col-md-7'>
+    {{! class for text from the interview }}
+    <div class=''>
       <p>
         {{interview.description}}
       </p>
