@@ -23,10 +23,6 @@ Interview.init(
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
-    tokens_earned: {
-      type: DataTypes.FLOAT,
-      allowNull: false,
-    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
