@@ -8,16 +8,17 @@
 
   </head>
 
-  <body class="ml-2">
-    <div class="_centered bg-blue-500 flex justify-center pb-8" >
-    <h1 class="text-6xl font-bold underline">Hello Future Programmers</h1> 
+  <body class="ml-2 bg-[#24788F]">
+    <div class="_centered bg-[#849DAB] flex justify-center pb-8" >
+    <h1 class="text-6xl font-bold underline text-[#282130]">Hello Future Programmers</h1> 
+    <img src= "computer.gif" alt="gif">
     </div>
 
     {{! Column for the header and main classes }}
   
       {{! Flex column for the header }}
       <header class='py-8'>
-        <h1 class "container mx-auto">
+        <h1 class="py-5 box-sizing border box flex justify-center bg-[#F18A85]">
           <a href='/'>Sign up here to step inside the world of Coding Interviews!</a>
         </h1>
         <nav>
@@ -27,6 +28,7 @@
             |
             <button class='no-button' id='logout'>logout</button>
           {{else}}
+          <h2 class="bg-[#472731] flex justify-center box-sizing border box text-white"
             <a href='/login'>login</a>
           {{/if}}
         </nav>
