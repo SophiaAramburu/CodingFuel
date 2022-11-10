@@ -38,6 +38,7 @@ User.init(
     tokens_earned: {
       type: DataTypes.INTEGER,
       allowNull: false,
+			defaultValue: 0,
     },
   },
   {
