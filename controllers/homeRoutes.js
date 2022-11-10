@@ -95,4 +95,8 @@ router.get('/questions', (req, res) => {
   }
 });
 
+router.get('/game', withAuth, (req, res) => {
+  res.redirect('/game');
+});
+
 module.exports = router;
