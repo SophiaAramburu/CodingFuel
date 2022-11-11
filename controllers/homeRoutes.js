@@ -3,10 +3,10 @@ const { Interview, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
-  if (!req.session.logged_in) {
-    res.redirect('/login');
-    return;
-  }
+  // if (!req.session.logged_in) {
+  //   res.redirect('/login');
+  //   return;
+  // }
   try {
     // Get all interviews and JOIN with user data
     const interviewData = await Interview.findAll({
