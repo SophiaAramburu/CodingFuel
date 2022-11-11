@@ -1,7 +1,7 @@
 {{! Row for the name class }}
 <div class=''>
   {{! column for the name class }}
-  <div class=''>
+  <div class='text-white font-mono text-5xl flex justify-center'>
     <h2>Welcome, {{name}}!</h2>
   </div>
 </div>
@@ -9,23 +9,23 @@
 {{! Class for the flex column }}
 <div class=''>
   {{! Column for the interview topics class }}
-  <div class=''>
+  <div class='text-white font-mono text-2xl'>
     <h3>Interview topics:</h3>
 
-    <form class='form new-project-form'>
+    <form class='form new-project-form text-white'>
       <div class='form-group'>
         <label for='interview-name'>Company interviewed with:</label>
         <input
-          class='form-input'
+          class='form-input black border-2 border-black'
           type='text'
           id='interview-name'
           name='interview-name'
         />
       </div>
-      <div class='form-group'>
+      <div class='form-group text-white font-mono'>
         <label for='interview-funding'>Question asked:</label>
         <input
-          class='form-input'
+          class='form-input black border-2 border-black'
           type='number'
           id='interview-funding'
           name='interview-funding'
@@ -34,7 +34,7 @@
       <div class='form-group'>
         <label for='interview-desc'>What kind of feedback are you looking for?</label>
         <textarea
-          class='form-input'
+          class='form-input black border-2 border-black'
           id='interview-desc'
           name='interview-desc'
         ></textarea>
