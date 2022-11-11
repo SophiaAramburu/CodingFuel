@@ -547,7 +547,6 @@ video {
   }
 }
 
-
 .mx-10 {
   margin-left: 2.5rem;
   margin-right: 2.5rem;
@@ -566,10 +565,10 @@ video {
   display: flex;
 }
 
-
 .justify-start {
   justify-content: flex-start;
 }
+
 .justify-center {
   justify-content: center;
 }
@@ -585,7 +584,6 @@ video {
 .border {
   border-width: 1px;
 }
-
 
 .border-2 {
   border-width: 2px;
@@ -657,13 +655,14 @@ video {
 
 .p-3\.5 {
   padding: 0.875rem;
-  
-.bg-cover {
-  background-size: cover;
 }
 
-.bg-center {
-  background-position: center;
+.p-8 {
+  padding: 2rem;
+}
+
+.p-10 {
+  padding: 2.5rem;
 }
 
 .py-8 {
