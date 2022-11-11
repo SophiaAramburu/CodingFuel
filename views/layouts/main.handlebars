@@ -18,17 +18,18 @@
       {{! Flex column for the header }}
       <header class='py-8'>
         <h1 class="py-5 box-sizing border box flex justify-center bg-[#0c164f] text-white underline font-mono text-3xl">
-          <a href='/'>Sign up here</a>
+          <a href='/login'>Sign up/Login here</a>
         </h1>
         <nav>
           <!-- Conditionally render login or logout links -->
           {{#if logged_in}}
+          <h1 class="text-white font-mono text-2xl"
             <a href='/thread'>Question Thread</a>
             |
             <button class='no-button' id='logout'>logout</button>
           {{else}}
           <h2 class="bg-[#7649fe] flex justify-center box-sizing border box text-white font-mono py-4 text-2xl"
-            <a href='/login'>login</a>
+            <a href='/login'>Welcome to Coding Fuel Prep. Please sign up and login to get the best interview prep there is. Play our game to practice your interview skills and coding knowledge once you enter. Thanks!! - <3 TeamCodingFuel</a>
           {{/if}}
         </nav>
       </header>
