@@ -15,6 +15,10 @@ Interview.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+		questions: {
+			type: DataTypes.INTEGER,
+			allowNull: false,
+		},
     description: {
       type: DataTypes.STRING,
     },
