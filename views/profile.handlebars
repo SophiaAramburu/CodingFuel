@@ -7,7 +7,7 @@
 </div>
 
 {{! Class for the flex column }}
-<div class=''>
+<div class='flex justify-center p-10'>
   {{! Column for the interview topics class }}
   <div class='text-white font-mono text-2xl'>
     <h3>Interview topics:</h3>
@@ -16,7 +16,7 @@
       <div class='form-group'>
         <label for='interview-name'>Company interviewed with:</label>
         <input
-          class='form-input black border-2 border-black'
+          class='form-input black border-2 border-black text-black'
           type='text'
           id='interview-name'
           name='interview-name'
@@ -25,7 +25,7 @@
       <div class='form-group text-white font-mono'>
         <label for='interview-funding'>Question asked:</label>
         <input
-          class='form-input black border-2 border-black'
+          class='form-input black border-2 border-black text-black'
           type='number'
           id='interview-funding'
           name='interview-funding'
@@ -34,13 +34,13 @@
       <div class='form-group'>
         <label for='interview-desc'>What kind of feedback are you looking for?</label>
         <textarea
-          class='form-input black border-2 border-black'
+          class='form-input black border-2 border-black text-black'
           id='interview-desc'
           name='interview-desc'
         ></textarea>
       </div>
       <div class='form-group'>
-        <button type='submit' class='btn btn-primary'>Create</button>
+        <button type='submit' class='rounded-full border-2 border-white p-3'>Create</button>
       </div>
     </form>
   </div>
