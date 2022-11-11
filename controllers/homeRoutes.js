@@ -3,6 +3,10 @@ const { Interview, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
+  if (!req.session.logged_in) {
+    res.redirect('/login');
+    return;
+  }
   try {
     // Get all interviews and JOIN with user data
     const interviewData = await Interview.findAll({
@@ -15,7 +19,9 @@ router.get('/', async (req, res) => {
     });
 
     // Serialize data so the template can read it
-    const interviews = interviewData.map((interview) => interview.get({ plain: true }));
+    const interviews = interviewData.map((interview) =>
+      interview.get({ plain: true })
+    );
 
     // Pass serialized data and session flag into template
     res.render('homepage', { 
@@ -28,6 +34,10 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/interview/:id', async (req, res) => {
+  if (!req.session.logged_in) {
+    res.redirect('/login');
+    return;
+  }
   try {
     const interviewData = await Interview.findByPk(req.params.id, {
       include: [
@@ -42,7 +52,7 @@ router.get('/interview/:id', async (req, res) => {
 
     res.render('interview', {
       ...interview,
-      logged_in: req.session.logged_in
+      logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -62,7 +72,7 @@ router.get('/profile', withAuth, async (req, res) => {
 
     res.render('profile', {
       ...user,
-      logged_in: true
+      logged_in: true,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -77,6 +87,16 @@ router.get('/login', (req, res) => {
   }
 
   res.render('login');
+});
+
+router.get('/questions', (req, res) => {
+  if (req.session.logged_in) {
+    res.redirect('/questions');
+  }
+});
+
+router.get('/game', withAuth, (req, res) => {
+  res.redirect('/game');
 });
 
 module.exports = router;
