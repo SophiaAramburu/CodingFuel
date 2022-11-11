@@ -13,7 +13,7 @@ Questions.init(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    description: {
+    difficulty: {
       type: DataTypes.INTEGER,
     },
   },

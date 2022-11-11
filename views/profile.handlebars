@@ -10,9 +10,9 @@
 <div class=''>
   {{! Column for the interview topics class }}
   <div class=''>
-    <h3>Interview topics:</h3>
+    <h3>Game Feedback:</h3>
 
-    <form class='form new-project-form'>
+    <form class='form new-interview-form'>
       <div class='form-group'>
         <label for='interview-name'>Company interviewed with:</label>
         <input
@@ -20,15 +20,6 @@
           type='text'
           id='interview-name'
           name='interview-name'
-        />
-      </div>
-      <div class='form-group'>
-        <label for='interview-funding'>Question asked:</label>
-        <input
-          class='form-input'
-          type='number'
-          id='interview-funding'
-          name='interview-funding'
         />
       </div>
       <div class='form-group'>
@@ -47,8 +38,8 @@
 
   {{#if interviews.length}}
     {{! column for the recent interview list }}
-    <div class='project-list'>
-      <h3>Recent interviews:</h3>
+    <div class='feedback-list'>
+      <h3>Your Game Feedback:</h3>
 
       {{#each interviews as |interview|}}
         {{! Row for the interview objects }}
