@@ -24,9 +24,9 @@ router.get('/', async (req, res) => {
     );
 
     // Pass serialized data and session flag into template
-    res.render('homepage', { 
-      // interviews, 
-      logged_in: req.session.logged_in 
+    res.render('homepage', {
+      // interviews,
+      logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -54,6 +54,19 @@ router.get('/interview/:id', async (req, res) => {
       ...interview,
       logged_in: req.session.logged_in,
     });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/game', async (req, res) => {
+  console.log(req.body);
+  if (!req.session.logged_in) {
+    res.render('/login');
+    return;
+  }
+  try {
+    res.render('game');
   } catch (err) {
     res.status(500).json(err);
   }
