@@ -19,11 +19,10 @@ Questions.init(
   },
   {
     sequelize,
-    timestamps: false,
     freezeTableName: true,
     underscored: true,
     modelName: 'questions',
   }
 );
 
-module.exports = Questions;
+module.exports = Question;

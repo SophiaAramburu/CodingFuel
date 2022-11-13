@@ -59,18 +59,18 @@ router.get('/interview/:id', async (req, res) => {
   }
 });
 
-router.get('/game', async (req, res) => {
-  console.log(req.body);
-  if (!req.session.logged_in) {
-    res.render('/login');
-    return;
-  }
-  try {
-    res.render('game');
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+// router.get('/game', async (req, res) => {
+//   console.log(req.body);
+//   if (!req.session.logged_in) {
+//     res.render('/login');
+//     return;
+//   }
+//   try {
+//     res.render('game');
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
 // Use withAuth middleware to prevent access to route
 router.get('/profile', withAuth, async (req, res) => {
