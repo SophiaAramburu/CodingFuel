@@ -1,8 +1,9 @@
 const sequelize = require('../config/connection');
-const { User, Interview } = require('../models');
+const { User, Interview, Questions } = require('../models');
 
 const userData = require('./userData.json');
 const interviewData = require('./interviewData.json');
+const interviewQuestions = require('./interviewQuestions.json');
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
@@ -11,6 +12,8 @@ const seedDatabase = async () => {
     individualHooks: true,
     returning: true,
   });
+
+  const questions = await Questions.bulkCreate(interviewQuestions);
 
   for (const interview of interviewData) {
     await Interview.create({
