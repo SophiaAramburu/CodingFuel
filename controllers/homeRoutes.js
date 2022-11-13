@@ -25,7 +25,7 @@ router.get('/', async (req, res) => {
 
     // Pass serialized data and session flag into template
     res.render('homepage', {
-      // interviews,
+      interviews,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
@@ -106,10 +106,6 @@ router.get('/questions', (req, res) => {
   if (req.session.logged_in) {
     res.redirect('/questions');
   }
-});
-
-router.get('/game', withAuth, (req, res) => {
-  res.redirect('/game');
 });
 
 module.exports = router;

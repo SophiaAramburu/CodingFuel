@@ -5,7 +5,7 @@ class Questions extends Model {}
 
 Questions.init(
   {
-    id: {
+    question: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -13,13 +13,12 @@ Questions.init(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    description: {
+    difficulty: {
       type: DataTypes.INTEGER,
     },
   },
   {
     sequelize,
-    timestamps: false,
     freezeTableName: true,
     underscored: true,
     modelName: 'questions',
