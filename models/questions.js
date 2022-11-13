@@ -5,7 +5,7 @@ class Questions extends Model {}
 
 Questions.init(
   {
-    id: {
+    question: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -25,4 +25,4 @@ Questions.init(
   }
 );
 
-module.exports = Question;
+module.exports = Questions;

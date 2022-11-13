@@ -13,10 +13,7 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-  const questions = await Questions.bulkCreate(questions, {
-    individualHooks: true,
-    returning: true,
-  });
+  const questions = await Questions.bulkCreate(interviewQuestions);
 
   for (const interview of interviewData) {
     await Interview.create({
