@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Interview, User } = require('../models');
+const { Interview, User, Questions } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -48,10 +48,10 @@ router.get('/interview/:id', async (req, res) => {
       ],
     });
 
-    const interview = interviewData.get({ plain: true });
+    const interviews = interviewData.get({ plain: true });
 
-    res.render('interview', {
-      ...interview,
+    res.render('game', {
+      ...interviews,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
@@ -66,7 +66,24 @@ router.get('/game', async (req, res) => {
     return;
   }
   try {
-    res.render('game');
+    // Get 5 questions and JOIN with user data
+    const interviewQuestions = await Questions.findAll({
+      order: Sequelize.literal('rand()'),
+      limit: 5,
+    }).then(() => {
+      // single random encounter
+
+      // Serialize data so the template can read it
+      const questions = interviewQuestions.map((interview) =>
+        interview.get({ plain: true })
+      );
+
+      // Pass serialized data and session flag into template
+      res.render('game', {
+        ...questions,
+        logged_in: req.session.logged_in,
+      });
+    });
   } catch (err) {
     res.status(500).json(err);
   }
@@ -94,10 +111,10 @@ router.get('/profile', withAuth, async (req, res) => {
 
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
-  if (req.session.logged_in) {
-    res.redirect('/profile');
-    return;
-  }
+  // if (req.session.logged_in) {
+  //   res.redirect('/profile');
+  //   return;
+  // }
 
   res.render('login');
 });
