@@ -1,0 +1,52 @@
+<html lang='en'>
+
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>Improve your interview skills!</title>
+    <link rel='stylesheet' href='./output.css' />
+
+  </head>
+
+  <body class="ml-2 bg-[#24788F] bg-cover bg-center ..." style= "background-image:url(https://media.istockphoto.com/photos/night-scene-milky-way-background-picture-id521011652?b=1&k=20&m=521011652&s=170667a&w=0&h=ePNj0u6c1bbj8LCgnmSjGWqNmrx6Y2ppz2wY9mEuf94=) ;">
+    <div class="_centered bg-[#849DAB] flex justify-center pb-8 bg-cover bg-center ..." style="background-image: url(https://media.istockphoto.com/photos/night-scene-milky-way-background-picture-id521011652?b=1&k=20&m=521011652&s=170667a&w=0&h=ePNj0u6c1bbj8LCgnmSjGWqNmrx6Y2ppz2wY9mEuf94=)" >
+    <h1 class="text-6xl font-bold text-white font-mono motion-safe:animate-pulse">Hello Future Programmers!!</h1> 
+    </div>
+
+    {{! Column for the header and main classes }}
+  
+      {{! Flex column for the header }}
+      <header class='py-8'>
+        <h1 class="py-5 box-sizing border box flex justify-center bg-[#0c164f] text-white underline font-mono text-3xl">
+          <a href='/login'>Sign up/Login here</a>
+        </h1>
+        <nav>
+          <!-- Conditionally render login or logout links -->
+          {{#if logged_in}}
+          <h1 class="text-white font-mono text-2xl"
+            <a href='/game'>Interview Prep</a>
+            |
+            <button class='no-button' id='logout'>logout</button>
+          {{else}}
+          <h2 class="bg-[#7649fe] flex justify-center box-sizing border box text-white font-mono py-4 text-2xl"
+            <a href='/login'>Welcome to Coding Fuel Prep. Please sign up and login to get the best interview prep there is. Play our game to practice your interview skills and coding knowledge once you enter. Thanks!! - <3 TeamCodingFuel</a>
+          {{/if}}
+        </nav>
+      </header>
+      {{! Fluid container for the body IMPORTANT }}
+      <main class='container'>
+        <!-- Render the sub layout -->
+        {{{body}}}
+      </main>
+      <footer>
+
+      </footer>
+    </div>
+
+    <!-- Render script for logged in users only -->
+    {{#if logged_in}}
+      <script src='./js/logout.js'></script>
+    {{/if}}
+  </body>
+
+</html>
