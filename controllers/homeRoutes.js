@@ -50,7 +50,7 @@ router.get('/interview/:id', async (req, res) => {
 
     const interviews = interviewData.get({ plain: true });
 
-    res.render('game', {
+    res.render('interview', {
       ...interviews,
       logged_in: req.session.logged_in,
     });
@@ -60,29 +60,31 @@ router.get('/interview/:id', async (req, res) => {
 });
 
 router.get('/game', async (req, res) => {
-  console.log(req.body);
   if (!req.session.logged_in) {
     res.render('/login');
     return;
   }
+  console.log('Hello world');
   try {
     // Get 5 questions and JOIN with user data
-    const interviewQuestions = await Questions.findAll({
-      order: Sequelize.literal('rand()'),
-      limit: 5,
-    }).then(() => {
-      // single random encounter
+    const interviewQuestions = await Questions.findAll();
+    // Serialize data so the template can read it
+    const questions = interviewQuestions.map((interview) =>
+      interview.get({ plain: true })
+    );
 
-      // Serialize data so the template can read it
-      const questions = interviewQuestions.map((interview) =>
-        interview.get({ plain: true })
-      );
+    const questionsFive = [];
 
-      // Pass serialized data and session flag into template
-      res.render('game', {
-        ...questions,
-        logged_in: req.session.logged_in,
-      });
+    for (i = 0; i < 5; i++) {
+      let questionInsert =
+        questions[Math.floor(Math.random() * questions.length)];
+      questionsFive.push(questionInsert);
+    }
+    console.log(questionsFive);
+    // Pass serialized data and session flag into template
+    res.render('game', {
+      questionsFive,
+      logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);

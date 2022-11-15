@@ -1,4 +1,4 @@
-{{#each questions as |question|}}
+{{#each questionsFive as |question|}}
   {{! Class for the flex section }}
   <div class='questions'>
     {{! Class for the question column }}
@@ -7,10 +7,9 @@
         <span
           class='question-topic py-5 box-sizing border box flex justify-center bg-[#0c164f] text-white'
         >
-          /question
+          {{question.question}}
         </span>
       </p>
-      <p>{{question.question}}</p>
       <div class='container bg-blue-500'>
         <label for='interview-question'>Write your answer here:</label>
         <input
