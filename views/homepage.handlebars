@@ -1,25 +1,3 @@
-{{#each questions as |question|}}
-  {{! Class for the flex section }}
-  <div class='question'>
-    {{! Class for the question column }}
-    <div class=''>
-      <h2>
-        <a href='/question/{{question.id}}'>{{question.name}}</a>
-      </h2>
-      <p>
-        <span class='question-topic'>
-          /question
-        </span>
-      </p>
-      <p>Asked by
-        {{question.user.name}}
-         <div class="container bg-blue-500">test123</div>
-         
-      </p>
-    </div>
-  </div>
-{{/each}}
-
 <!-- Loop over each object in the threads array -->
 {{#each interviews as |interview|}}
   {{! Class for the flex section }}

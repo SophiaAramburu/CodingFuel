@@ -16,6 +16,11 @@ Questions.init(
     difficulty: {
       type: DataTypes.INTEGER,
     },
+    id: {
+      type: DataTypes.INTEGER,
+      autoIncrement: true,
+      primaryKey: true,
+    },
   },
   {
     sequelize,

@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Interview, User } = require('../models');
+const { Interview, User, Questions } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -48,10 +48,10 @@ router.get('/interview/:id', async (req, res) => {
       ],
     });
 
-    const interview = interviewData.get({ plain: true });
+    const interviews = interviewData.get({ plain: true });
 
     res.render('interview', {
-      ...interview,
+      ...interviews,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
@@ -60,13 +60,32 @@ router.get('/interview/:id', async (req, res) => {
 });
 
 router.get('/game', async (req, res) => {
-  console.log(req.body);
   if (!req.session.logged_in) {
     res.render('/login');
     return;
   }
+  console.log('Hello world');
   try {
-    res.render('game');
+    // Get 5 questions and JOIN with user data
+    const interviewQuestions = await Questions.findAll();
+    // Serialize data so the template can read it
+    const questions = interviewQuestions.map((interview) =>
+      interview.get({ plain: true })
+    );
+
+    const questionsFive = [];
+
+    for (i = 0; i < 5; i++) {
+      let questionInsert =
+        questions[Math.floor(Math.random() * questions.length)];
+      questionsFive.push(questionInsert);
+    }
+    console.log(questionsFive);
+    // Pass serialized data and session flag into template
+    res.render('game', {
+      questionsFive,
+      logged_in: req.session.logged_in,
+    });
   } catch (err) {
     res.status(500).json(err);
   }
@@ -94,10 +113,10 @@ router.get('/profile', withAuth, async (req, res) => {
 
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
-  if (req.session.logged_in) {
-    res.redirect('/profile');
-    return;
-  }
+  // if (req.session.logged_in) {
+  //   res.redirect('/profile');
+  //   return;
+  // }
 
   res.render('login');
 });
