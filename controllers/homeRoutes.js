@@ -50,7 +50,7 @@ router.get('/interview/:id', async (req, res) => {
 
     const interviews = interviewData.get({ plain: true });
 
-    res.render('game', {
+    res.render('interview', {
       ...interviews,
       logged_in: req.session.logged_in,
     });

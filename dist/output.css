@@ -560,8 +560,16 @@ video {
   display: flex;
 }
 
+.list-disc {
+  list-style-type: disc;
+}
+
 .justify-center {
   justify-content: center;
+}
+
+.justify-items-center {
+  justify-items: center;
 }
 
 .rounded-full {
@@ -650,6 +658,18 @@ video {
   padding-bottom: 2rem;
 }
 
+.pr-4 {
+  padding-right: 1rem;
+}
+
+.pl-2 {
+  padding-left: 0.5rem;
+}
+
+.pl-8 {
+  padding-left: 2rem;
+}
+
 .font-mono {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
@@ -676,6 +696,10 @@ video {
 
 .font-bold {
   font-weight: 700;
+}
+
+.leading-8 {
+  line-height: 2rem;
 }
 
 .text-white {
