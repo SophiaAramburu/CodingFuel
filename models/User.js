@@ -35,11 +35,6 @@ User.init(
         len: [8],
       },
     },
-    tokens_earned: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-			defaultValue: 0,
-    },
   },
   {
     hooks: {
@@ -48,10 +43,7 @@ User.init(
         return newUserData;
       },
       beforeUpdate: async (updatedUserData) => {
-        updatedUserData.password = await bcrypt.hash(
-          updatedUserData.password,
-          10
-        );
+        updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
         return updatedUserData;
       },
     },
