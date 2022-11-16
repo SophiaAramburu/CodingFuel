@@ -8,9 +8,6 @@
 - [Installation Instructions](#installation)
 - [Usage](#usage)
 - [License](#license)
-- [Contributing](#contribute)
-- [Tests](#tests)
-- [Questions](#questions)
 
 ## Description
 
