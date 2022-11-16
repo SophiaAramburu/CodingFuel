@@ -18,7 +18,7 @@
 
 ## Installation
 
-  1) Run npm install 2) source DB locally in mysql (mysql -u root -p) and create .env file 3) npm run seed 4) npm start 5) open in browser localhost:3001 
+  1) Run npm install 2) source DB in mysql and create .env file 3) npm run seed 4) npm start 5) open in browser localhost:3001 
 
 ## Usage
 
@@ -28,7 +28,7 @@
 
   ![badge](https://img.shields.io/badge/License-MIT-blue)
 
-  MIT License Copyright (c) 2022 SophiaAramburu
+  MIT License Copyright (c) 2022
     (https://mit-license.org/)
   
 ## Team
