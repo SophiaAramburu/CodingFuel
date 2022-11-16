@@ -15,7 +15,7 @@
 
 ## Installation
 
-  1) Run npm install 2) source db/schema.sql in mysql and create .env file 3) npm run seed 4) npm start 5) open in browser localhost:3001 
+  1) Run npm install 2) source schema in mysql and create .env file 3) npm run seed 4) npm start 5) open in browser localhost:3001 
 
 ## Usage
 
