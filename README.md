@@ -1,126 +1,53 @@
-# 15 Project 2: Interactive Full-Stack Application
+# CodingFuel
 
-Projects play a key role in your journey to becoming a full-stack web developer. As you enter the last phase of the boot camp, you’ll begin to apply for development jobs. If you want to land interviews, your portfolio must feature high-quality deployed examples of your work—-and you can use your finished projects for that very purpose.
+![badge](https://img.shields.io/badge/License-MIT-blue)
 
-As your first opportunity to show employers your collaborative skills and coding abilities, this particular project will be a focal point of your portfolio. Employers want to see what you can do, but they also want to see how you work with other developers. The more examples of deployed collaborative work you have in your portfolio, the more likely you are to get an interview and a job.
+## Table of Contents
 
-## Project Requirements
+- [Description](#description)
+- [Installation Instructions](#installation)
+- [Usage](#usage)
+- [License](#license)
 
-You and your group will use everything you’ve learned over the past six modules to create a real-world full-stack application that you’ll be able to showcase to potential employers. The user story and acceptance criteria will depend on the project that you create, but your project must fulfil the following requirements:
+## Description
 
-* Use Node.js and Express.js to create a RESTful API.
+  Tech interview prep site MVC with handlebars, sequelize, express, mysql, and node
 
-* Use Handlebars.js as the template engine.
+## Installation
 
-* Use MySQL and the Sequelize ORM for the database.
+  1) Run npm install 2) source schema in mysql and create .env file 3) npm run seed 4) npm start 5) open in browser localhost:3001 
 
-* Have both GET and POST routes for retrieving and adding new data.
+## Usage
 
-* Use at least one new library, package, or technology that we haven’t discussed.
+  Signup and post details on completed interviews and prep with randomized interview questions
 
-* Have a folder structure that meets the MVC paradigm.
+## License
 
-* Include authentication (express-session and cookies).
+  ![badge](https://img.shields.io/badge/License-MIT-blue)
 
-* Protect API keys and sensitive information with environment variables.
+  MIT License Copyright (c) 2022
+    (https://mit-license.org/)
+  
+## Team
 
-* Be deployed using Heroku (with data).
+  Sophia Aramburu
 
-* Have a polished UI.
+  Aidan Krbec
 
-* Be responsive.
+  Scott Simon
+  
+ - Screenshot
 
-* Be interactive (i.e., accept and respond to user input).
+![image](https://user-images.githubusercontent.com/60651145/202078296-c539f11a-25fd-4158-82ab-4e0582322df7.png)
 
-* Meet good-quality coding standards (file structure, naming conventions, follows best practices for class/id naming conventions, indentation, quality comments, etc.).
+- URL to deployed application
 
-* Have a professional README (with unique name, description, technologies used, screenshot, and link to deployed application).
+https://codingfuel.herokuapp.com/
 
-## Presentation Requirements
+- URL to Github Repo
 
-Use this [project presentation template](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit?usp=sharing) to address the following: 
+https://github.com/SophiaAramburu/CodingFuel
 
-* Elevator pitch: a one minute description of your application
+- Google Slides Presentation
 
-* Concept: What is your user story? What was your motivation for development?
-
-* Process: What were the technologies used? How were tasks and roles broken down and assigned? What challenges did you encounter? What were your successes?
-
-* Demo: Show your stuff!
-
-* Directions for Future Development
-
-* Links to the deployed application and the GitHub repository. Use the [Guide to Deploy with Heroku and MySQL](https://coding-boot-camp.github.io/full-stack/heroku/deploy-with-heroku-and-mysql) on The Full-Stack Blog if you need a reminder on how to deploy to Heroku.
-
-## Grading Requirements
-
-This project is graded based on the following criteria:
-
-### Technical Acceptance Criteria: 25%
-
-* Satisfies the following code requirements:
-
-  * Application uses a Node.js and Express.js back end and uses both GET and POST routes for retrieving and adding new data.
-
-  * Application has a folder structure that meets the MVC paradigm and uses Handlebars.js as the template engine.
-
-  * Application is backed by a MySQL database with a Sequelize ORM and protects API keys and sensitive information with environment variables.
-
-  * Application includes user authentication (express-session and cookies).
-
-  * Application uses at least one new library, package, or technology not covered in class.
-
-### Concept 10%
-
-* Application should be a unique and novel idea.
-
-* Your group should clearly and concisely articulate your project idea.
-
-### Deployment: 20%
-
-* Application deployed at live URL on Heroku and loads with no errors.
-
-* Application GitHub URL submitted.
-
-### Repository Quality: 10%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id-naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality README file with description, screenshot, and link to deployed application.
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate.
-
-* Application user interface style is clean and polished.
-
-* Application is responsive.
-
-### Presentation 10%
-
-* Your group should present using a slide deck.
-
-* Every group member should speak during the presentation.
-
-* Your presentation should follow the [Project Presentation Template](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit?usp=sharing).
-
-### Collaboration 10%
-
-* There are no major disparities in the number of GitHub contributions between group members.
-
-## How to Submit Your Interactive Full-Stack Project
-
-**Each member of your group** is required to submit the following for review:
-
-* The URL of the deployed application.
-
-* The URL of the GitHub repository, with a unique name and a README describing the project.
-
----
-© 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+https://docs.google.com/presentation/d/191GznhUY7OV66Zy7C3fr9khcVR66Nh0UalGarDs5hys/edit#slide=id.p
