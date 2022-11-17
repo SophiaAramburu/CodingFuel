@@ -1,10 +1,17 @@
 {{! Class for the interview information }}
+{{! Class for the interview information }}
+<div class='text-white font-mono text-2xl flex justify-center pb-8 space-x-10 underline'>
+  <h2 class= "w-34">Company</h2>
+  <p class= "w-34">Questions Asked</p>
+  <p class= "w-34">Feedback</p>
+  <p class= "w-34"></p>
+  <p class= "w-34">Created by/on</p>
+
+</div> 
 <div class='text-white font-mono text-2xl flex justify-center pb-8 space-x-10'>
-  <h2>{{name}}</h2>
-  <p>{{{questions}}}</p>
-  <p>{{description}}</p>
-  <p>Created by {{user.name}} on {{format_date date_created}}</p>
-  <p>
-    <button class='btn btn-primary'>Help this developer out</button>
+  <h2 class="w-34">{{name}}</h2>
+  <p class="w-34">{{{questions}}}</p>
+  <p class="w-34">{{description}}</p>
+  <p class="w-34">Created by {{user.name}} on {{format_date date_created}}</p>
   </p>
 </div> 
