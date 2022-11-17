@@ -32,7 +32,7 @@
 
   Sophia Aramburu
 
-  Aiden Krbec
+  Aidan Krbec
 
   Scott Simon
   
