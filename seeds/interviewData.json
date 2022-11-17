@@ -1,17 +1,17 @@
 [
   {
-    "name": "",
-		"questions": 5,
-    "description": " Interview"
+    "name": "Amazon",
+		"questions": 2,
+    "description": "Software Engineer Interview"
   },
   {
-    "name": "Front-End",
-		"questions": 5,
-    "description": "Front-End Interview"
+    "name": "Netflix",
+		"questions": 6,
+    "description": "Junior Developer Interview"
   },
   {
-    "name": "Back-End",
-		"questions": 5,
-    "description": "Back-End Interview"
+    "name": "Google",
+		"questions": 4,
+    "description": "Staff Software Engineer Interview"
   }
 ]

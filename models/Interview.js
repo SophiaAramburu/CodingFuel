@@ -13,14 +13,14 @@ Interview.init(
     },
     name: {
       type: DataTypes.STRING,
-      allowNull: false,
     },
-		questions: {
-			type: DataTypes.INTEGER,
-			allowNull: false,
-		},
+    questions: {
+      type: DataTypes.INTEGER,
+    },
     description: {
       type: DataTypes.STRING,
+      primaryKey: true,
+      allowNull: false,
     },
     date_created: {
       type: DataTypes.DATE,

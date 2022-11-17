@@ -8,6 +8,10 @@ Questions.init(
     question: {
       type: DataTypes.STRING,
       allowNull: false,
+      references: {
+        model: 'Interview',
+        key: 'description',
+      },
     },
     tokens_given: {
       type: DataTypes.INTEGER,

@@ -85,6 +85,7 @@ router.get('/game', async (req, res) => {
     res.render('game', {
       questionsFive,
       logged_in: req.session.logged_in,
+      name: req,
     });
   } catch (err) {
     res.status(500).json(err);

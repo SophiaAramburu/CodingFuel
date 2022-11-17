@@ -1,26 +1,30 @@
-{{#each questionsFive as |question|}}
-  {{! Class for the flex section }}
-  <div class='questions'>
-    {{! Class for the question column }}
-    <div class='py-8 container'>
-      <p>
-        <span
-          class='question-topic py-5 box-sizing border box flex justify-center bg-[#0c164f] text-white'
-        >
-          {{question.question}}
-        </span>
-      </p>
-      <div class='container bg-blue-500'>
-        <label for='interview-question'>Write your answer here:</label>
-        <input
-          class='form-input black border-2 border-black text-black'
-          type='text'
-          id='question-response'
-          name='question-response'
-        />
+<form class='new-interview-question'>
+  {{#each questionsFive as |question|}}
+    {{! Class for the flex section }}
+    <div class='questions'>
+      {{! Class for the question column }}
+      <div class='py-8 container'>
+        <p>
+          <span
+            class='question-topic py-5 box-sizing border box flex justify-center bg-[#0c164f] text-white'
+          >
+            {{question.question}}
+          </span>
+        </p>
+        <div class='container bg-blue-500'>
+
+          <label for='interview-question'>Write your answer here:</label>
+          <input
+            class='form-input black border-2 border-black text-black question-response'
+            type='text'
+            name='question-response'
+          />
+
+        </div>
       </div>
     </div>
-  </div>
-{{/each}}
+  {{/each}}
+  <button> Submit </button>
+</form>
 
 <script src='./js/questions.js'></script>
